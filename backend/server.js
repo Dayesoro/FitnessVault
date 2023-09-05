@@ -1,16 +1,21 @@
 import express from 'express';
+import workoutRoutes from './routes/workouts.js'
 import { config } from 'dotenv';
 config();
 
 
 const port = process.env.PORT
+
 const app = express();
 
 
+// middleware
+app.use(express.json());
+
+
 // routes
-app.get('/', (req, res) => {
-    res.json({ mssg: 'Welcome to the app' })
-});
+app.use('/api/workouts', workoutRoutes);
+
 
 // listen for requests
 app.listen(port, () => {
