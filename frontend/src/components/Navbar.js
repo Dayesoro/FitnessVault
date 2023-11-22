@@ -14,7 +14,7 @@ const NavBar = () => {
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
                 {/* Application Logo and Name */}
-                <Navbar.Brand onClick={handleShow} style={{ cursor: 'pointer' }}>
+                <Navbar.Brand style={{ cursor: 'pointer' }}>
                     <div className="d-flex align-items-center">
                         <BsBoxArrowInUp className="text-warning" size={30} />
                         <span className="ml-2">

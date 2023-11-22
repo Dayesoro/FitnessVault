@@ -25,7 +25,7 @@ const WorkoutDetails = ({ workout }) => {
             <h4>{workout.title}</h4>
             <p><strong>Load (kg): </strong>{workout.load}</p>
             <p><strong>Reps: </strong>{workout.reps}</p>
-            <p className="mt-3">{workout.createdAt}</p>
+            <p className="mt-3">{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
             <span onClick={handleClick}>
                 <BsTrash className="text-danger" style={{ cursor: 'pointer' }} />
             </span>
