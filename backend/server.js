@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import workoutRoutes from './routes/workouts.js';
+import userRoutes from './routes/user.js';
 import { config } from 'dotenv';
 config();
 
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
 
 // routes
 app.use('/api/workouts', workoutRoutes);
+app.use('/api/user', userRoutes);
 
 const main = async () => {
     try {
