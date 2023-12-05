@@ -1,8 +1,10 @@
 // NavBar.js
 import { useState } from 'react';
-import { Navbar, Nav, Container, Modal, Button } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { BsPlus, BsBoxArrowInUp } from 'react-icons/bs'; // Import Bootstrap icons
 import WorkoutForm from './WorkoutForm';
+import { Link } from 'react-router-dom'; // Import Link for routing
+
 
 const NavBar = () => {
     const [showModal, setShowModal] = useState(false);
@@ -14,7 +16,7 @@ const NavBar = () => {
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
                 {/* Application Logo and Name */}
-                <Navbar.Brand style={{ cursor: 'pointer' }}>
+                <Link to="/" className="navbar-brand" style={{ cursor: 'pointer' }}>
                     <div className="d-flex align-items-center">
                         <BsBoxArrowInUp className="text-warning" size={30} />
                         <span className="ml-2">
@@ -22,7 +24,7 @@ const NavBar = () => {
                             <span style={{ color: '#118ab2' }}>Vault</span>
                         </span>
                     </div>
-                </Navbar.Brand>
+                </Link>
 
                 {/* Toggle button for responsive design */}
                 <Navbar.Toggle aria-controls="navbar-nav" />
@@ -37,6 +39,14 @@ const NavBar = () => {
                             <BsPlus className="mr-1" />
                             Add Workout
                         </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+
+                {/* Login and Signup Links - Moved to Far Right */}
+                <Navbar.Collapse className="justify-content-end">
+                    <Nav>
+                        <Nav.Link as={Link} to="/login" className="nav-link">Login</Nav.Link>
+                        <Nav.Link as={Link} to="/signup" className="nav-link">Signup</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
