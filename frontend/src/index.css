@@ -104,6 +104,7 @@ nav button {
   color: var(--primary);
   border: 1px solid var(--primary);
   padding: 6px 10px;
+  margin-left: 15px;
   border-radius: 4px;
   font-family: "Poppins";
   cursor: pointer;
@@ -111,7 +112,7 @@ nav button {
 }
 
 /* auth forms */
-form.signup,
+form.sign-up,
 form.login {
   max-width: 400px;
   margin: 40px auto;

@@ -5,6 +5,7 @@ import { BsPlus, BsBoxArrowInUp } from 'react-icons/bs'; // Import Bootstrap ico
 import WorkoutForm from './WorkoutForm';
 import { Link } from 'react-router-dom'; // Import Link for routing
 import { useLogout } from '../hooks/useLogout';
+import { useAuthContext } from '../hooks/useAuthContext'
 
 
 const NavBar = () => {
@@ -14,6 +15,7 @@ const NavBar = () => {
     const handleClose = () => setShowModal(false);
 
     const { logout } = useLogout()
+    const { user } = useAuthContext()
 
     const handleClick = () => {
         logout()
@@ -52,13 +54,20 @@ const NavBar = () => {
                 {/* Login and Signup Links - Moved to Far Right */}
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
-                        <div>
-                            <button onClick={handleClick}>Log out</button>
-                        </div>
+                        {user && (
+                            <div>
+                                <span style={{ color: '#e9ecef' }}>{user.email}</span>
+                                <button onClick={handleClick}>Log out</button>
+                            </div>
+                        )}
                     </Nav>
                     <Nav>
-                        <Nav.Link as={Link} to="/login" className="nav-link">Login</Nav.Link>
-                        <Nav.Link as={Link} to="/signup" className="nav-link">Signup</Nav.Link>
+                        {!user && (
+                            <>
+                                <Nav.Link as={Link} to="/login" className="nav-link">Login</Nav.Link>
+                                <Nav.Link as={Link} to="/signup" className="nav-link">Signup</Nav.Link>
+                            </>
+                        )}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
