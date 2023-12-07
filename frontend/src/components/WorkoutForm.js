@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
+import { useAuthContext } from '../hooks/useAuthContext';
 import { Modal, Button } from 'react-bootstrap';
 
 const WorkoutForm = ({ showModal, handleClose }) => {
     const { dispatch } = useWorkoutsContext()
+    const { user } = useAuthContext()
 
     const [title, setTitle] = useState('');
     const [load, setLoad] = useState('');
@@ -22,6 +24,11 @@ const WorkoutForm = ({ showModal, handleClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
+        if (!user) {
+            setError('You must be logged in')
+            return
+        }
+
         const workout = { title, load, reps }
 
 
@@ -29,7 +36,8 @@ const WorkoutForm = ({ showModal, handleClose }) => {
             method: 'POST',
             body: JSON.stringify(workout),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
             }
         })
 
