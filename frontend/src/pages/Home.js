@@ -12,7 +12,6 @@ const Home = () => {
 
     const { user } = useAuthContext()
 
-
     useEffect(() => {
         const fetchWorkouts = async () => {
             const response = await fetch('/api/workouts', {
