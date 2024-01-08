@@ -15,7 +15,7 @@ const WorkoutDetails = ({ workout }) => {
         if (!user) {
             return
         }
-        const response = await fetch('https://fitness-vault.onrender.com/api/workouts' + workout._id, {
+        const response = await fetch('https://fitness-vault.onrender.com/api/workouts/' + workout._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
