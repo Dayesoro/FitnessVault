@@ -28,8 +28,6 @@ FitnessVault is tailored for fitness enthusiasts, athletes, and individuals dedi
 
 ## Future Plans
 
-- Deploy both the FrontEnd And Backend
-
 - Dynamic Workout Naming: Introduce a user-friendly dropdown feature, allowing users to efficiently add the names of their workouts. This enhancement aims to streamline the process of cataloging exercises for a personalized and organized workout history.
 
 - Performance Metrics: Implement a sophisticated metrics display that showcases users' progress in comparison to their previous lifts, tailored to the specific exercise type. This enhancement seeks to offer users a detailed analysis of their improvements, fostering a deeper understanding of their fitness journey.

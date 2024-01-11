@@ -10,7 +10,8 @@ config();
 const port = process.env.PORT;
 
 const app = express();
-const allowedDomains = ["https://cheerful-manatee-209faa.netlify.app", "http://localhost:3000"]
+const allowedDomains = ["https://fitnessvault.netlify.app", "http://localhost:3000"]
+
 
 
 // middleware
