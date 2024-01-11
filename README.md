@@ -1,8 +1,17 @@
 
 # 🏋🏽🎧FitnessVault🔥💪🏼
 
-FitnessVault addresses a common challenge faced by both seasoned gym enthusiasts and gym newbies: the need to track and monitor one's progress. Achieving fitness goals requires consistent tracking, emphasizing the importance of methodically recording progress.
+### 💪 Sweat, Track, Conquer! 🏋️‍♂️ Dive into FitnessVault – Your Ultimate Workout Companion. Log your fitness journey with ease! 💼 Own your story:
 
+>> (https://fitnessvault.netlify.app)
+>>
+>> --> Logging in and fetching the data might take a minute to load when logging in as the service hosting the server needs some time to boot up after a period of inactivity.
+
+---
+
+
+## About
+FitnessVault addresses a common challenge faced by both seasoned gym enthusiasts and gym newbies: the need to track and monitor one's progress. Achieving fitness goals requires consistent tracking, emphasizing the importance of methodically recording progress.
 
 ## Features
 
@@ -25,6 +34,62 @@ FitnessVault is tailored for fitness enthusiasts, athletes, and individuals dedi
 
 **DataBase:** MongoDB
 
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Dayesoro/FitnessVault
+```
+
+Go to the frontend project directory
+
+```bash
+  cd frontend
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+- Open a browser and navigate to `http://localhost:3000`.
+- You should now be able to try the app for yourself!
+- If you do not want to signup to try the app, you can use the following credentials to login:
+  ```
+  username: testing@gmail.com
+  password: testingPOS123!
+  ```
+
+
+## How To Use FitnessVault
+
+
+ **Log In:**
+   - Start by logging in to access the application. Only registered users can log in.
+
+ **Sign Up:**
+   - If you're new, sign up to create an account. This enables you to log in later.
+    - Make sure to choose a strong password for added security.
+    - A strong password should include a mix of uppercase and lowercase letters, numbers, and special characters.
+    - Example of a strong password: `Fit@ness#2023`
+
+ **Add Workout:**
+   - Click the "Add Workout" button located at the top of the app in the navbar.
+
+ **Fill Workout Details:**
+   - A popup will appear; fill in your workout details. 
+   - Click "Add Workout" at the bottom right of the popup to log your workout successfully.
+
+ **Log Out:**
+   - To secure your logs, click the "Log Out" button on the top right corner of the app in the navbar.  
 
 ## Future Plans
 
