@@ -62,7 +62,7 @@ Start the server
 ```
 - Open a browser and navigate to `http://localhost:3000`.
 - You should now be able to try the app for yourself!
-- If you do not want to signup to try the app, you can use the following credentials to login:
+- Experience the app without the need to sign up! Simply log in using the provided   credentials:
   ```
   username: testing@gmail.com
   password: testingPOS123!
